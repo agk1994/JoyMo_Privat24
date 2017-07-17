@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Magk_Privat24>
+            <version>0.1.0</version>
+        </Magk_Privat24>
+    </modules>
+
+    <global>
+        <blocks>
+            <privat24>
+                <class>Magk_Privat24_Block</class>
+            </privat24>
+        </blocks>
+
+        <models>
+            <privat24>
+                <class>Magk_Privat24_Model</class>
+            </privat24>
+        </models>
+        <helpers>
+            <privat24>
+                <class>Magk_Privat24_Helper</class>
+            </privat24>
+        </helpers>
+
+        <resources>
+            <privat24_setup>
+                <setup>
+                    <module>Magk_Privat24</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </privat24_setup>
+            <privat24_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </privat24_write>
+            <privat24_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </privat24_read>
+        </resources>
+    </global>
+    <frontend>
+        <secure_url>
+            <magk_privat24>privat24/index</magk_privat24>
+        </secure_url>
+        <routers>
+            <privat24>
+                <use>standard</use>
+                <args>
+                    <module>Magk_Privat24</module>
+                    <frontName>privat24</frontName>
+                </args>
+            </privat24>
+        </routers>
+    </frontend>
+
+    <default>
+        <payment>
+            <privat24>
+                <!-- by default this payment method is inactive -->
+                <active>0</active>
+                <!-- model to handle logic for this payment method -->
+                <model>privat24/payment</model>
+                <!-- order status for new orders paid by this payment method -->
+                <order_status>pending</order_status>
+                <!-- default title for payment checkout page and order view page -->
+                <title>Magk.net - Privat24</title>
+                <cctypes>AE,VI,MC,DI</cctypes>
+                <allowspecific>0</allowspecific>
+            </privat24>
+        </payment>
+    </default>
+</config>

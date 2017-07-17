@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Magk_Privat24>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Payment/>
+            </depends>
+        </Magk_Privat24>
+    </modules>
+</config>
