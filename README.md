@@ -2,5 +2,9 @@
 Magento Privat24 extension.
 Модуль оплаты Приват24 для Magento.
 
-Magento version capability:
-1.7, 1.8, 1.9
+Compability
+Magento CE:
+1.6.2.0
+1.7.0.2
+1.8
+1.9
